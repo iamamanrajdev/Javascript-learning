@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Math Project</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .container { background-color: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 90%; max-width: 400px; }
+        h2 { color: #333; border-bottom: 2px solid #4CAF50; padding-bottom: 10px; }
+        button { background-color: #4CAF50; color: white; border: none; padding: 12px 18px; font-size: 16px; border-radius: 5px; cursor: pointer; margin-top: 10px; }
+        button:hover { background-color: #45a049; }
+        #otpDisplay { font-size: 24px; font-weight: bold; color: #d9534f; background-color: #f9f9f9; padding: 10px; border-radius: 5px; margin-top: 10px; text-align: center; letter-spacing: 4px; }
+        input[type="text"] { width: 95%; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px; }
+        .results p { font-size: 18px; background-color: #e7e7e7; padding: 8px; border-radius: 5px; }
+        .results span { font-weight: bold; color: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>OTP Generator</h2>
+        <p>Click the button to get a 6-digit OTP.</p>
+        <button id="generateOtpBtn">Generate OTP</button>
+        <div id="otpDisplay">------</div>
+        <hr style="margin: 30px 0;">
+        <h2>Math Calculator Tool</h2>
+        <p>Enter numbers separated by commas (e.g., 5, 20, 3, 15)</p>
+        <input type="text" id="numberInput" placeholder="e.g., 5, 20, 3, 15">
+        <button id="calculateBtn">Calculate</button>
+        <div class="results" style="margin-top: 20px;">
+            <p>Minimum Number: <span id="minResult">-</span></p>
+            <p>Maximum Number: <span id="maxResult">-</span></p>
+            <p>Sum of Numbers: <span id="sumResult">-</span></p>
+        </div>
+    </div>
+
+    <script>
+        // === PART 1: OTP GENERATOR LOGIC ===
+        const generateOtpBtn = document.getElementById('generateOtpBtn');
+        const otpDisplay = document.getElementById('otpDisplay');
+
+        generateOtpBtn.addEventListener('click', function() {
+            const otp = Math.floor(100000 + Math.random() * 900000);
+            otpDisplay.textContent = otp;
+        });
+
+        // === PART 2: MATH CALCULATOR LOGIC ===
+        const calculateBtn = document.getElementById('calculateBtn');
+        const numberInput = document.getElementById('numberInput');
+        const minResult = document.getElementById('minResult');
+        const maxResult = document.getElementById('maxResult');
+        const sumResult = document.getElementById('sumResult');
+
+        calculateBtn.addEventListener('click', function() {
+            const inputText = numberInput.value;
+            if (inputText.trim() === '') {
+                alert('Please enter some numbers!');
+                return;
+            }
+            const numbers = inputText.split(',').map(Number);
+            if (numbers.some(isNaN)) {
+                alert('Please enter valid numbers separated by commas.');
+                return;
+            }
+            const minVal = Math.min(...numbers);
+            const maxVal = Math.max(...numbers);
+            const sumVal = numbers.reduce((total, current) => total + current, 0);
+            
+            minResult.textContent = minVal;
+            maxResult.textContent = maxVal;
+            sumResult.textContent = sumVal;
+        });
+    </script>
+</body>
+</html>

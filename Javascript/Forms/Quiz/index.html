@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Know Your Mentor Quiz</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Know Your Mentor Quiz</h1>
+    <form id="quizForm">
+      <div class="question">
+        <p>1. What is Rohit Bhaiyaa's favorite programming language?</p>
+        <label><input type="radio" name="q1" value="JavaScript"> JavaScript</label><br>
+        <label><input type="radio" name="q1" value="Python"> Python</label><br>
+        <label><input type="radio" name="q1" value="C++"> C++</label><br>
+        <label><input type="radio" name="q1" value="Java"> Java</label><br>
+      </div>
+
+      <div class="question">
+        <p>2. Which city is Rohit Bhaiyaa from?</p>
+        <label><input type="radio" name="q2" value="Delhi"> Delhi</label><br>
+        <label><input type="radio" name="q2" value="Bangalore"> Bangalore</label><br>
+        <label><input type="radio" name="q2" value="Dehradun"> Dehradun</label><br>
+        <label><input type="radio" name="q2" value="Mumbai"> Mumbai</label><br>
+      </div>
+
+      <div class="question">
+        <p>3. What does Rohit Bhaiyaa always emphasize in learning?</p>
+        <label><input type="radio" name="q3" value="Theory only"> Theory only</label><br>
+        <label><input type="radio" name="q3" value="Practice and Consistency"> Practice and Consistency</label><br>
+        <label><input type="radio" name="q3" value="Luck"> Luck</label><br>
+        <label><input type="radio" name="q3" value="Copying Code"> Copying Code</label><br>
+      </div>
+
+      <div class="question">
+        <p>4. Which platform does Rohit Bhaiyaa use to teach?</p>
+        <label><input type="radio" name="q4" value="YouTube"> YouTube</label><br>
+        <label><input type="radio" name="q4" value="Instagram"> Instagram</label><br>
+        <label><input type="radio" name="q4" value="CoderArmy"> CoderArmy</label><br>
+        <label><input type="radio" name="q4" value="Facebook"> Facebook</label><br>
+      </div>
+
+      <div class="question">
+        <p>5. What is Rohit Bhaiyaa’s birthday?</p>
+        <label><input type="radio" name="q5" value="9th June"> 9th June</label><br>
+        <label><input type="radio" name="q5" value="10th July"> 10th July</label><br>
+        <label><input type="radio" name="q5" value="5th May"> 5th May</label><br>
+        <label><input type="radio" name="q5" value="1st January"> 1st January</label><br>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+    <div class="result" id="result"></div>
+    <div id="out"></div>
+  </div>
+
+  <script src="./first.js"></script>
+</body>
+</html>

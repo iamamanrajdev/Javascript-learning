@@ -1,0 +1,134 @@
+/* General Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f0c29;
+    background-image: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; /* Hides scrollbars caused by canvas */
+}
+
+/* The main card */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px 50px;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    animation: fadeInCard 1s ease-out forwards;
+}
+
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Mentor's Picture */
+.mentor-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #FFD700; /* Gold-like color */
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+    animation: fadeInElement 1s ease-out 0.5s forwards;
+    opacity: 0;
+}
+
+/* Typography */
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #FFD700, 0 0 20px #FFD700;
+    margin-bottom: 5px;
+    animation: fadeInElement 1s ease-out 0.8s forwards;
+    opacity: 0;
+}
+
+.mentor-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #e0e0e0;
+    margin-bottom: 25px;
+    animation: fadeInElement 1s ease-out 1.1s forwards;
+    opacity: 0;
+}
+
+.message {
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    animation: fadeInElement 1s ease-out 1.4s forwards;
+    opacity: 0;
+}
+
+.signature {
+    font-weight: 400;
+    font-style: italic;
+    color: #FFD700;
+    animation: fadeInElement 1s ease-out 1.7s forwards;
+    opacity: 0;
+}
+
+/* Animation for individual elements */
+@keyframes fadeInElement {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Canvas for JS particles */
+#particle-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place it behind everything */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .card {
+        padding: 30px 25px;
+    }
+    .main-title {
+        font-size: 2.2rem;
+    }
+    .mentor-name {
+        font-size: 1.5rem;
+    }
+    .message {
+        font-size: 1rem;
+    }
+}

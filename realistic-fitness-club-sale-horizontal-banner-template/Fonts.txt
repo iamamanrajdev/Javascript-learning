@@ -1,0 +1,5 @@
+Fonts used in this design:
+
+Font: Spline Sans
+Author: Eben Sorkin,Mirko Velimirovic
+Url: https://fonts.google.com/specimen/Spline+Sans

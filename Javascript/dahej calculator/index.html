@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🤣 Dahej Calculator 2025</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      background: #fff6e0;
+      color: #333;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #e63946;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: #ffebcd;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 10px #f0a;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin: 15px 0 5px;
+    }
+    select, input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      background: #ff6347;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #e5533c;
+    }
+    .result {
+      margin-top: 30px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #2a9d8f;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💰 Dahej Calculator 🤵🏻‍♂️</h1>
+  <div class="container">
+    <label for="education">📚 Education</label>
+    <select id="education">
+      <option value="0">Illiterate</option>
+      <option value="50000">High School</option>
+      <option value="100000">Graduate</option>
+      <option value="200000">Engineer</option>
+      <option value="300000">Doctor/IAS</option>
+    </select>
+
+    <label for="job">💼 Job</label>
+    <select id="job">
+      <option value="0">No Job</option>
+      <option value="100000">Private Job</option>
+      <option value="200000">Govt Job</option>
+      <option value="500000">Abroad Job</option>
+    </select>
+
+    <label for="car">🚗 Do you own a car?</label>
+    <select id="car">
+      <option value="0">Nope</option>
+      <option value="100000">Second-hand</option>
+      <option value="200000">Hatchback</option>
+      <option value="300000">SUV</option>
+    </select>
+
+    <label for="house">🏠 Own House?</label>
+    <select id="house">
+      <option value="0">Rented</option>
+      <option value="200000">Small House</option>
+      <option value="400000">Bungalow</option>
+    </select>
+
+    <label for="looks">😎 Handsomeness Level</label>
+    <select id="looks">
+      <option value="0">Better not say</option>
+      <option value="50000">Normal</option>
+      <option value="100000">Fair & Lovely</option>
+      <option value="200000">6-pack Hero</option>
+    </select>
+
+    <button onclick="calculateDahej()">Calculate Dahej 😂</button>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function calculateDahej() {
+      const edu = parseInt(document.getElementById("education").value);
+      const job = parseInt(document.getElementById("job").value);
+      const car = parseInt(document.getElementById("car").value);
+      const house = parseInt(document.getElementById("house").value);
+      const looks = parseInt(document.getElementById("looks").value);
+
+      let total = edu + job + car + house + looks;
+
+      let msg = "";
+      if (total <= 100000) {
+        msg = "Bhai shaadi to love marriage hi karle 😅";
+      } else if (total <= 400000) {
+        msg = "Shaadi pakki, but milenge mixer-grinder max!";
+      } else if (total <= 700000) {
+        msg = "Dahej mil sakta hai, mummy papa proud honge!";
+      } else {
+        msg = "Gold chain, scooty, aur AC room confirmed! 💸💸";
+      }
+
+      document.getElementById("result").innerHTML = `
+        Expected Dahej Value: ₹${total.toLocaleString()} <br/> 
+        <br/> 🤣 Verdict: ${msg}
+      `;
+    }
+  </script>
+
+</body>
+</html>

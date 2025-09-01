@@ -1,0 +1,37 @@
+#outer{
+    height: 500px;
+    width: 500px;
+    border: 2px solid black;
+    margin: 0 auto;
+    margin-top: 170px;
+    position: relative;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAYNxBy8pByuDJI3JWjcOIeaU5-8Pde4-F2g&s");
+    background-size: cover;
+}
+
+#inner{
+     height: 300px;
+     width: 300px;
+     border: 2px solid black;
+     border-radius:50%;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 5rem;
+     color: black;
+     background-color:#FFFF00;
+   text-shadow: 5px 2px 4px rgba(0,0,0,0.3);
+
+}
+     
+#inner:hover
+{
+    background-color:#76ff03;
+
+    box-shadow:5px 5px 15px 0 #FF5C00 ;
+
+}
