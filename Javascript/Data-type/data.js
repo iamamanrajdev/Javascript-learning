@@ -159,9 +159,91 @@ console.log(big+2n)//!9007199254740993n ✅ (No precision loss)
     //? Why is typeof function "function" instead of "object"?
 
 	//*•	In JavaScript, functions are actually objects (callable objects).
-	//*•	However, the typeof operator was intentionally designed to return "function" for functions (instead of "object") to make it easier to distinguish them from normal objects.
+	//*•	However, the typeof operator was intentionally designed to return "function"
+    //* for functions (instead of "object") to make it easier to distinguish them from
+    // * normal objects.
     	//*•	This is a special case in the language specification for developer convenience in (ECMAScript)
 
 
-    
+  //*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
+//?🔥 10 Most Important JavaScript Data Type Questions
 
+//?1. Type Checking Basics
+//*👉 Predict output:
+console.log(typeof null);//!object
+console.log(typeof NaN);//!number
+console.log(typeof []);//!object
+console.log(typeof {});//!object
+console.log(typeof function(){});//!function
+
+//? 2. Implicit Type Conversion (Type Coercion)
+//*👉 Predict output:
+console.log("5" - 2);//!3
+console.log("5" + 2);//!"52"
+console.log(true + true);//!2
+console.log(false + 10);//!10
+console.log("10" * "2");//!20
+
+//?3. NaN Tricky Cases
+//*👉 Predict output:
+console.log(NaN === NaN);///!false
+console.log(Number.isNaN("NaN"));//!false
+console.log(isNaN("NaN"));//!true
+console.log(0 / 0);//!NaN
+
+//?4. null vs undefined
+//*👉 Predict output:
+let a;
+let b = null;
+console.log(typeof a);//!undefined
+console.log(typeof b);//!object
+console.log(a == b);//!true
+console.log(a === b);//!false
+
+//?5. Object vs Array vs Function
+//*👉 Predict output:
+console.log(Array.isArray([]));//!true
+console.log([] instanceof Object);//!true
+console.log({} instanceof Object);//!true
+console.log(function(){} instanceof Object);//!true
+
+//? 6. String Conversion
+//!👉 Predict output:
+console.log(100 + "200");//!"100200"
+console.log("Hello" + true);//!"Hellotrue"
+console.log("5" + 5 + 5);//!"555"
+console.log(5 + 5 + "5");//!"105"
+
+//?7. Boolean Conversion (Truthy & Falsy)
+//*👉 Predict output:
+console.log(Boolean(""));//!false
+console.log(Boolean(" "));//!true
+console.log(Boolean(0));//!false
+console.log(Boolean("0"));//!true
+console.log(Boolean([]));//!true
+console.log(Boolean({}));//!true
+
+//?8. BigInt
+//*👉 Predict output:
+let big = 1234567890123456789012345678901234567890n;
+console.log(typeof big); //!bigint
+
+
+//?9. Equality Puzzles (== vs ===)
+//*👉 Predict output:
+console.log(0 == false);//!true
+console.log(0 === false);//!false
+console.log("0" == false);//!true
+console.log("0" === false);//!false
+
+//?10. typeof Special Cases
+//*👉 Predict output:
+console.log(typeof undefined);//!undefined
+console.log(typeof null);//!object
+console.log(typeof NaN);//!Number
+console.log(typeof Infinity);//!number
+console.log(typeof new Date());//!Object
+//*----------------The end-------------------------------------------------------------------------------------------
+//*--“Consistency beats talent.
+//*Har din chhoti progress karo, chahe 1% hi sahi.
+//*Ek din woh 1% milke aapko 100% banayega.”
